@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kope Car Rental - Sewa Mobil Mudah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kope Car Rental</h1>
+            <p>Solusi Sewa Mobil Terpercaya Dimanapun Anda Berada</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="car-selection">
+            <h2>Pilih Mobil</h2>
+            <div class="car-grid">
+                <!-- Toyota Avanza -->
+                <div class="car-card">
+                    <img src="images/jenis-mobil-avanza-dan-harganya.png" alt="Toyota Avanza" class="car-image">
+                    <div class="car-info">
+                        <h3>Toyota Avanza</h3>
+                        <p class="price">Rp 500.000 / hari</p>
+                        <div class="car-controls">
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="car-checkbox" data-car="avanza" data-price="500000">
+                                <span class="checkmark"></span>
+                                Pilih mobil ini
+                            </label>
+                            <div class="rental-inputs">
+                                <div class="input-group">
+                                    <label>Tanggal Mulai:</label>
+                                    <input type="date" class="start-date" data-car="avanza">
+                                </div>
+                                <div class="input-group">
+                                    <label>Durasi (hari):</label>
+                                    <input type="number" class="duration" data-car="avanza" min="1" value="1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toyota Kijang Innova -->
+                <div class="car-card">
+                    <img src="images/inova.jpeg" alt="Toyota Kijang Innova" class="car-image">
+                    <div class="car-info">
+                        <h3>Toyota Kijang Innova</h3>
+                        <p class="price">Rp 700.000 / hari</p>
+                        <div class="car-controls">
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="car-checkbox" data-car="innova" data-price="700000">
+                                <span class="checkmark"></span>
+                                Pilih mobil ini
+                            </label>
+                            <div class="rental-inputs">
+                                <div class="input-group">
+                                    <label>Tanggal Mulai:</label>
+                                    <input type="date" class="start-date" data-car="innova">
+                                </div>
+                                <div class="input-group">
+                                    <label>Durasi (hari):</label>
+                                    <input type="number" class="duration" data-car="innova" min="1" value="1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Honda HRV -->
+                <div class="car-card">
+                    <img src="images/honda-cr-v-2-6057.png" alt="Honda HRV" class="car-image">
+                    <div class="car-info">
+                        <h3>Honda HRV</h3>
+                        <p class="price">Rp 600.000 / hari</p>
+                        <div class="car-controls">
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="car-checkbox" data-car="hrv" data-price="600000">
+                                <span class="checkmark"></span>
+                                Pilih mobil ini
+                            </label>
+                            <div class="rental-inputs">
+                                <div class="input-group">
+                                    <label>Tanggal Mulai:</label>
+                                    <input type="date" class="start-date" data-car="hrv">
+                                </div>
+                                <div class="input-group">
+                                    <label>Durasi (hari):</label>
+                                    <input type="number" class="duration" data-car="hrv" min="1" value="1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daihatsu Sigra -->
+                <div class="car-card">
+                    <img src="images/daihatsu.webp" alt="Daihatsu Sigra" class="car-image">
+                    <div class="car-info">
+                        <h3>Daihatsu Sigra</h3>
+                        <p class="price">Rp 450.000 / hari</p>
+                        <div class="car-controls">
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="car-checkbox" data-car="sigra" data-price="450000">
+                                <span class="checkmark"></span>
+                                Pilih mobil ini
+                            </label>
+                            <div class="rental-inputs">
+                                <div class="input-group">
+                                    <label>Tanggal Mulai:</label>
+                                    <input type="date" class="start-date" data-car="sigra">
+                                </div>
+                                <div class="input-group">
+                                    <label>Durasi (hari):</label>
+                                    <input type="number" class="duration" data-car="sigra" min="1" value="1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="customer-form">
+            <h2>Informasi Pelanggan</h2>
+            <div class="form-group">
+                <label for="customerName">Nama Pelanggan:</label>
+                <input type="text" id="customerName" placeholder="Masukkan nama lengkap">
+            </div>
+            <button id="calculateTotal" class="btn btn-primary">Hitung Total</button>
+        </section>
+
+        <section class="summary" id="summarySection" style="display: none;">
+            <h2>Ringkasan Pemesanan</h2>
+            <div id="summaryContent"></div>
+            <div class="total-section">
+                <h3 id="totalAmount">Total: Rp 0</h3>
+            </div>
+            <button id="saveBooking" class="btn btn-success">Simpan Pemesanan</button>
+        </section>
+
+        <section class="booking-history">
+            <h2>Riwayat Pemesanan</h2>
+            <div id="bookingList">
+                <p class="no-bookings">Belum ada pemesanan</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ABC Car Rental. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
